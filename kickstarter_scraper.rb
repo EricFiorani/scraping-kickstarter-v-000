@@ -14,6 +14,7 @@ def create_project_hash
     projects[title.to_sym] = {}
   end
   projects
+  binding.pry
 end
 
 # projects: kickstarter.css("li.project.grid_4")
