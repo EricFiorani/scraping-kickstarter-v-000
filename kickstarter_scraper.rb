@@ -16,9 +16,10 @@ def create_project_hash
        img").attribute("src").value,
       :description => project.css("p.bbcard_blurb").text,
       :location => project.css("ul.project-meta span.location-name").text,
-      :percent_funded => project.css("ul.project-stats 
+      :percent_funded => project.css("ul.project-stats
        li.first.funded strong").text.gsub("%", "").to_i
     }
+      binding.pry
   end
   projects
 end
@@ -31,4 +32,4 @@ end
 # location: project.css("ul.project-meta span.location-name").text
 # percent funded: project.css("ul.project-stats li.first.funded strong").text.gsub("%", "").to_i
 create_project_hash
-  binding.pry
+
